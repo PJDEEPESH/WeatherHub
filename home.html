@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Hub</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./slider.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header class="p-3 bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <div class="logo d-flex">
+                    <a href="./home.html" style="cursor: pointer; text-decoration: none;"><span class="fs-1"
+                            style="color: orange;font-family:'Playfair Display', serif;text-shadow: 0 0 1px white;">weather
+                        </span><span class="fs-1"
+                            style="color: yellow;font-family:'Playfair Display', serif;text-shadow: 0 0 1px white;">
+                            hub</span></h1></a>
+                </div>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-4 px-5 my-2 justify-content-center mb-md-0">
+                    <li style="margin-left: 2px;"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="#features" class="nav-link px-2 text-white">Features</a></li>
+                    <li><a href="#headlines" class="nav-link px-2 text-white">Headlines</a></li>
+                    <li><a href="#services" class="nav-link px-2 text-white">Services</a></li>
+                    <li><a href="./faqs.html" class="nav-link px-2 text-white">FAQs</a></li>
+                </ul>
+
+                <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+                        aria-label="Search">
+                </form> -->
+
+                <div class="text-end d-flex gap-3 justify-content-center align-items-center">
+                    <a style="text-decoration: none;color:aliceblue"
+                        href="https://www.google.com/maps/place/@14.3353797,78.5373097,17z?entry=ttu" target="_blank"
+                        class=""><img src="./assets/location.png" width="15px" height="20px"><span
+                            style="margin-left: 6px;" title="Click here to visit IIIT">IIIT RK Valley ,
+                            Vempalli</span></a>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" id="offCanvas" aria-controls="offcanvasRight">
+                        <img src="./assets/notification.png" width="30px" height="30px"></button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Notifications</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <hr>
+                            Up to now , there are no notifications recieved yet.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!--  -->
+
+    <div class="p-5 text-center hero-section m-3">
+        <div class="mask">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white">
+                    <h1 class="mb-3"><span style="color: orange;font-family:'Playfair Display', serif;">weather
+                        </span><span style="color: yellow;font-family:'Playfair Display', serif;">
+                            hub</span></h1>
+                    <h4 class="mb-3">Discover the Unmatched Trust of 98% Accurate Weather Forecasts</h4>
+                    <a class="btn btn-outline-light btn-lg" href="./main.html" role="button">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <div class="container">
+        <h2>Few clicks of Atmosphere</h2>
+        <br>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-interval="1800" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+
+                    <img src="./assets/1.png" class="d-block w-100" alt="...">
+
+                </div>
+                <div class="carousel-item">
+
+                    <img src="./assets/3.png" class="d-block w-100" alt="...">
+
+                </div>
+                <div class="carousel-item">
+
+                    <img src="./assets/4.png" class="d-block w-100" alt="...">
+
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <br><br>
+    <hr class="container" id="services">
+    <div class="container col-xxl-8 px-4 py-3">
+        <h2>Our Services</h2>
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-3">
+            <div class="col-10 col-sm-12 col-lg-6">
+                <img src="./assets/section.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400"
+                    height="400" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h3 class="lh-1 mb-3">Accurate Weather Forecasting</h3>
+                <p class="lead">Our platform guarantees highly reliable weather updates by sourcing data from the latest
+                    and most trusted channels, empowering users with dependable and precise forecasts for informed
+                    choices</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container col-xxl-8 px-4 py-3">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-3">
+            <div class="col-10 col-sm-12 order-md-1 col-lg-6">
+                <img src="./assets/forecast.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400"
+                    height="400" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h3 class="lh-1 mb-3">7 days Seamless Forecast</h3>
+                <p class="lead">Get ready for the week with our 7-day seamless forecast. Stay informed about daily
+                    highs, lows, and conditions for confident planning and decision-making</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container col-xxl-8 px-4 py-3">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-3">
+            <div class="col-10 col-sm-12 col-lg-6">
+                <img src="./assets/all_weather.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                    width="400" height="400" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h3 class="lh-1 mb-3">Report from Everyday to alerts</h3>
+                <p class="lead">Experience complete coverage with our diverse weather updates. Expect daily forecasts,
+                    anticipate hurricanes and disasters, and enjoy captivating visuals for a comprehensive weather
+                    journey.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                </div>
+            </div>
+        </div>
+        <hr id="headlines">
+    </div>
+
+    <div class="container text-center">
+        <h2>Headlines</h2>
+        <br>
+        <marquee direction="up" loop="">
+            <table class="table table-responsive">
+                <tr>
+                    <td>August 15, 2023</td>
+                    <td>Fresh Batch of Heavy Rains to Lash Odisha, West bengal, Sikkim and Jharkhand Between August
+                        15-19</td>
+                </tr>
+                <tr>
+                    <td>August 17, 2023</td>
+                    <td>Heavy Rains to Soak Himachal, Odisha, Jharkhand; Uttarakhand In For Very Heavy Falls</td>
+                </tr>
+                <tr>
+                    <td>August 14,2023</td>
+                    <td>On Monday, NASA released grim news stating how July 2023 was the hottest month in recorded
+                        history, since 1880.</td>
+                </tr>
+                <tr>
+                    <td>August 16,2023</td>
+                    <td> Ganga Crosses Danger Mark In Uttarakhand’s Rishikesh and Haridwar Districts; IMD Warns of Flash
+                        Floods</td>
+                </tr>
+                <tr>
+                    <td>August 16,2023</td>
+                    <td>Karnataka to Endure Scanty Rains, Warmer Days Till August 20; Bengaluru In for 30°C Temperatures
+                        This Week</td>
+                </tr>
+            </table>
+    </div>
+    </marquee>
+    <hr id="features">
+    <br>
+    <div class="container text-center">
+        <h2>Features</h2>
+        <br>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 rowFest">
+            <button class="col btn btn-lg col-btn" type="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                data-bs-placement="bottom" data-bs-title="Temperature"
+                data-bs-content="Temperature refers to the degree of hotness or coldness of the air, measured in units such as Celsius or Fahrenheit.">
+                Temperature
+            </button>
+            <button class="col btn btn-lg col-btn" type="button" data-bs-toggle="popover" data-bs-placement="bottom"
+                data-bs-trigger="focus" data-bs-title="Wind Speed"
+                data-bs-content="The velocity of horizontal air movement, measured in units like mph or km/h, impacting weather patterns, outdoor activities, and atmospheric circulation.">
+                Wind Speed
+            </button>
+            <button class="col btn btn-lg col-btn" type="button" data-bs-toggle="popover" data-bs-placement="bottom"
+                data-bs-trigger="focus" data-bs-title="Thunder (Probability)"
+                data-bs-content=" The likelihood of thunder occurring in a specific location, expressed as a percentage, reflecting the potential for lightning, loud noise, and stormy conditions in the area.">
+                Thunder Probability
+            </button>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 rowFest">
+            <button class="col btn btn-lg col-btn" type="button" data-bs-toggle="popover" data-bs-placement="bottom"
+                data-bs-trigger="focus" data-bs-title="Humidity"
+                data-bs-content="The level of moisture in the air, presented as a percentage, impacting perceived temperature, comfort, and atmospheric conditions.">
+                Humidity
+            </button>
+            <button class="col btn btn-lg col-btn" type="button" data-bs-toggle="popover" data-bs-placement="bottom"
+                data-bs-trigger="focus" data-bs-title="Pressure"
+                data-bs-content="Pressure refers to the force exerted by the weight of the atmosphere on a unit area of Earth's surface. Measured in units like millibars.">
+                Pressure
+            </button>
+            <button class="col btn btn-lg col-btn" type="button" data-bs-toggle="popover" data-bs-placement="bottom"
+                data-bs-trigger="focus" data-bs-title="Wind Direction"
+                data-bs-content="The compass direction from which the wind is blowing, crucial for understanding weather patterns and how air masses influence temperature, humidity, and precipitation distribution.">
+                Wind Direction
+            </button>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-6 row-cols-md-4 rowFest">
+            <button class="col btn btn-lg col-btn" type="button" data-bs-toggle="popover" data-bs-placement="bottom"
+                data-bs-trigger="focus" data-bs-title="Dew Point"
+                data-bs-content="The dew point is the temperature at which air becomes saturated with moisture, causing condensation to form as dew or frost. It indicates the point at which the air can no longer hold all its water vapor, offering insight into the potential for fog, frost, or dew formation as temperatures drop.">
+                Dew Point
+            </button>
+            <button class="col btn btn-lg col-btn" type="button" data-bs-toggle="popover" data-bs-placement="bottom"
+                data-bs-trigger="focus" data-bs-title="Wind Gust"
+                data-bs-content="A sudden, brief increase in wind speed above the prevailing average, often caused by atmospheric changes or turbulent conditions, which can impact outdoor activities and contribute to varying weather conditions.">
+                Wind Gust
+            </button>
+            <button class="col btn btn-lg col-btn" type="button" data-bs-toggle="popover" data-bs-placement="bottom"
+                data-bs-trigger="focus" data-bs-title="Cloudiness"
+                data-bs-content="The extent to which the sky is covered by clouds, usually expressed as a percentage. It affects sunlight, temperature, and visibility, influencing overall weather conditions and outdoor experiences.">
+                Cloudiness
+            </button>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 rowFest">
+            <button class="col btn btn-lg col-btn" type="button" data-bs-toggle="popover" data-bs-placement="bottom"
+                data-bs-trigger="focus" data-bs-title="Apparent Temperature"
+                data-bs-content="Apparent Temperature considers factors like temperature, humidity, wind speed, and sunlight to provide a more accurate perception of how hot or cold it feels to humans. It helps gauge the impact of weather on comfort and safety.">
+                Apparent Temperature
+            </button>
+            <button class="col btn btn-lg col-btn" type="button" data-bs-toggle="popover" data-bs-placement="bottom"
+                data-bs-trigger="focus" data-bs-title="UV Index"
+                data-bs-content="The UV Index is a numerical measurement representing the intensity of ultraviolet (UV) radiation from the sun. It helps individuals assess the potential for skin and eye damage, guiding them to take appropriate sun protection measures to prevent sunburn and related health risks.">
+                UV Index
+            </button>
+            <button class="col btn btn-lg col-btn" type="button" data-bs-toggle="popover" data-bs-placement="bottom"
+                data-bs-trigger="focus" data-bs-title="Precipitation Probability"
+                data-bs-content="The chance of rainfall, snowfall, or other forms of precipitation occurring in a specific area, represented as a percentage. It assists in planning activities and preparing for changing weather conditions.">
+                Precipitation Probability
+            </button>
+        </div>
+        <br>
+        <hr>
+    </div>
+
+    <!-- swiper script link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- link for swiper -->
+
+
+
+    <div class="container">
+        <div style="margin-top: 20px;">
+            <h2 align="center">Top cities Weather Report</h2>
+        </div>
+        <div style="margin-top: 20px;"></div>
+
+        <section class="review" id="review">
+            <div class="swiper review-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box">
+                        <img src="assets/rainy.svg" alt="c1">
+                        <br>
+                        <h4>Mumbai</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                Temp : 28°C
+                                <br>
+                                Humidity : 87%
+                            </div>
+                            <div class="col-6">
+                                Cloudiness : 59%
+                                <br>
+                                Wind : 6km/h
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img src="assets/thunder.svg" alt="c2">
+
+                        <h4>Boston</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                Temp : 19°C
+                                <br>
+                                Humidity : 97%
+                            </div>
+                            <div class="col-6">
+                                Cloudiness : 13%
+                                <br>
+                                Wind : 5km/h
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img src="assets/cloudy.svg" alt="c3">
+
+                        <h4>Visakhapatnam</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                Temp : 31°C
+                                <br>
+                                Humidity : 70%
+                            </div>
+                            <div class="col-6">
+                                Cloudiness : 93%
+                                <br>
+                                Wind : 6km/h
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img src="assets/high_sunny.svg" alt="c4">
+
+                        <h4>Chennai</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                Temp : 29°C
+                                <br>
+                                Humidity : 70%
+                            </div>
+                            <div class="col-6">
+                                Cloudiness : 43%
+                                <br>
+                                Wind : 8km/h
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img src="assets/snow.svg" alt="c5">
+
+                        <h4>Narkanda</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                Temp : 17°C
+                                <br>
+                                Humidity : 85%
+                            </div>
+                            <div class="col-6">
+                                Cloudiness : 27%
+                                <br>
+                                Wind : 4km/h
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img src="assets/sunny.svg" alt="c6">
+
+                        <h4>Vellore</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                Temp : 30°C
+                                <br>
+                                Wind : 10km/h
+                            </div>
+                            <div class="col-6">
+                                Cloudiness : 25%
+                                <br>
+                                Humidity : 53%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+
+    <script>
+        var swiper = new Swiper(".review-slider", {
+            loop: true,
+            spaceBetween: 20,
+            autoplay: {
+                delay: 7500,
+                disableOnInteraction: false,
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1020: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+    </script>
+    </div>
+    <!-- swiper script link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+<footer class="text-center text-white bg-dark">
+    <div class="bg-dark">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <h1 class="my-3"><span class="fs-1"
+                    style="color: orange;font-family:'Playfair Display', serif;text-shadow: 0 0 2px black;">weather
+                </span><span class="fs-1"
+                    style="color: yellow;font-family:'Playfair Display', serif;text-shadow: 0 0 2px black;">
+                    hub</span></h1>
+
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3 gap-2">
+                <li class="nav-item"><a href="./home.html" class="btn btn-outline-light">Home</a></li>
+                <li class="nav-item"><a href="#features" class="btn btn-outline-light">Features</a></li>
+                <li class="nav-item"><a href="#headlines" class="btn btn-outline-light">Headlines</a></li>
+                <li class="nav-item"><a href="./faqs.html" class="btn btn-outline-light">FAQs</a></li>
+
+                <a class="btn btn-outline-secondary" id="contribute" href="./contribute.html">Contribute to Us...</a>
+            </ul>
+            <section class="mb-4">
+               
+
+                <!-- Google -->
+                <a class="btn btn-light btn-floating m-1" href="https://wa.me/7075087601" role="button"
+                    target="_blank" title="WhatsApp"><img src="./assets/whatsapp.svg"></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-light btn-floating m-1" href="https://www.instagram.com/deepu_deepesh_/"
+                    target="_blank" role="button" title="Instagram"><img src="./assets/instagram.svg"></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-light btn-floating m-1"
+                    href="https://www.linkedin.com/in/p-j-deepesh-27546a20b/" target="_blank" role="button"
+                    title="LinkedIn"><img src="./assets/linkedin.svg"></a>
+
+                <!-- Github -->
+                <a class="btn btn-light btn-floating m-1" href="https://github.com/PJDEEPESH" role="button"
+                    target="_blank" title="Github"><img src="./assets/github.svg"></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Company,Inc: Discover the Unmatched Trust of 98% Accurate Weather Forecast
+        </div>
+        <!-- Copyright -->
+    </div>
+    <!-- End of .container -->
+</footer>
+
+
+
+</html>

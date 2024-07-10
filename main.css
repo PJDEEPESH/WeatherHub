@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Playfair+Display:wght@700&family=Roboto+Slab&family=Signika+Negative:wght@300&display=swap');
+
+/* font-family: 'Arvo', serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Signika Negative', sans-serif; */
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.top-section{
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    padding:10px;
+    padding-bottom: 1px;
+    justify-content: center;
+    background-color: rgb(142, 168, 201);
+    color: whitesmoke;
+}
+
+#close-btn{ 
+    position: absolute;
+    top: 0;
+    right: 0;
+    align-items: center;
+    padding:20px;
+}
+
+#close-btn:focus{
+    outline: none;
+}
+
+.li-item{
+    font-family: 'Roboto Slab', serif;
+    font-size: larger;
+}
+
+#title2{
+    text-align: center;
+}
+
+body{
+    user-select: none;
+    font-family: 'Signika Negative', sans-serif;
+    background-color: skyblue;
+}
+
+
+.search-section{
+    font-size: large;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+#search-btn{
+    border: 0.5px;
+    border-radius: 0.5em;
+    padding:15px 30px;
+    background-color: palevioletred;
+    color: white;
+}
+
+#city-name{
+    border: 1px;
+    border-radius: 2em; 
+    padding: 15px;
+    width:60%;
+}
+
+.table{
+    background-color:transparent;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+th{ 
+    font-family: 'Roboto Slab', serif;
+}
+
+td{
+    font-size: 20px;
+}
+
+
+.pricing-card-title{
+    font-size: 55px;
+}
+
+.nav-item{
+    font-family: 'Roboto Slab', serif;
+}
+
+div h1{
+    font-family: 'Open Sans', sans-serif;
+    color:chocolate;
+}
+
+

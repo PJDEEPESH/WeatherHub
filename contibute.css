@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Libre+Baskerville&family=Open+Sans:wght@500&family=Playfair+Display:wght@700&family=Roboto+Slab&family=Signika+Negative:wght@300&display=swap');
+/* font-family: 'Arvo', serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Signika Negative', sans-serif; */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+h3{
+    text-align: left;
+    font-family: 'Libre Baskerville', serif;
+    
+}
+
+.col-md-4{
+    margin-bottom: 10px;
+}
+
+
+small{
+    margin-left:10px;
+    color: rgb(231, 152, 165);
+}
+
+label{
+    color: blue;
+}
+
+.errors{
+    color: red;
+    font-family: 'Arvo', serif;
+}
